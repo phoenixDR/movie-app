@@ -1,0 +1,29 @@
+{{define "subject"}}Welcome to MovieApp!{{end}}
+
+{{define "plainBody"}} Hi {{.userName}},
+	Thanks for signing up for a MovieApp account. We're excited to have you on board! For future reference, your user ID number is {{.userID}}.
+    Token: {{.activationToken}}
+    Please note that this is a one-time use token and it will expire in 3 days.
+	Thanks,
+	The MovieApp Team
+{{end}}
+
+{{define "htmlBody"}}
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<p>Hi {{.userName}},</p>
+		<p>Thanks for signing up for a MovieApp account. We're excited to have you on board!</p>
+		<p>For future reference, your user ID number is {{.userID}}.</p>
+        <pre>Token: <code>{{.activationToken}}</pre>
+        <p>Please note that this is a one-time use token and it will expire in 3 days.</p>
+
+		<p>Thanks,</p>
+		<p>The MovieApp Team</p>
+	</body>
+</html>
+{{end}}
